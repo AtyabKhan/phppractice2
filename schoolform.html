@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form id="schoolform" enctype="multipart/form-data">
+            <label for="name">School Name: </label><input type="text" name="school_name" id="name"><br><br>
+            <label for="code">School Code: </label><input type="text" name="school_code" id="code"><br><br>
+            <label for="city">School City: </label><input type="text" name="school_city" id="city"><br><br>
+            <input type="submit" >
+        </form>
+        <script>
+            $('#schoolform').submit(function (event) {
+                event.preventDefault();
+                var schoolformvar = new FormData(this);
+                $.ajax({
+                    url: "http://localhost/phppractice/schoolform.php",
+                    type: "Post",
+                    crossDomain: true,
+                    data: schoolformvar,
+                    processData: false, //add this
+                    contentType: false, //and this
+                    success: function (data) {
+                        console.log(data);
+                    },
+                    error: function (xhr, exception) {
+                        var msg = "";
+                        msg = "Error:" + xhr.status + " " + xhr.responseText;
+                    }
+                }); 
+            // console.log("Record Entered Succesfully");
+            });
+
+        </script>
+    </body>
+</html>
