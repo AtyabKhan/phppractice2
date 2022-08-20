@@ -12,7 +12,7 @@
     // INNER JOIN students ON classid=classfk
     // INNER JOIN assessment_results ON studentid=studentfk";
     $sql="SELECT school.school_pk AS schoolid, classrooms.classroom_pk AS classid, classrooms.school_fk AS schoolfk, students.student_pk AS studentid, students.classroom_fk AS studentfk,  assessment_results.assessment_pk AS assessmentid, assessment_results.student_fk AS studentfk,students.student_name AS studentname, students.student_age AS studentage, school.school_name AS schoolName, school.school_city AS schoolCity, classrooms.class_code AS class, assessment_results.maths_obt AS mathsObt 
-    FROM school 
+    FROM school
     INNER JOIN classrooms ON school.school_pk=classrooms.school_fk
     INNER JOIN students ON classrooms.classroom_pk=students.classroom_fk
     INNER JOIN assessment_results ON students.student_pk=assessment_results.student_fk";
