@@ -8,12 +8,12 @@
     
         <?php
             $conn = new mysqli("localhost","phpadmin","Default!@#$56","phpdb");
-            // if($conn->connect_error){
-            //     die("Error in establishing Database Connection: " . $conn->connect_error);
-            // }
-            // else{
-            //     echo "Connection established successfully";
-            // }
+            if($conn->connect_error){
+                die("Error in establishing Database Connection: " . $conn->connect_error);
+            }
+            else{
+                echo "Connection established successfully";
+            }
             // $sql="SELECT * FROM students WHERE firstname='Atyab'";
             
             // // $result=$conn->query($sql);
@@ -24,13 +24,13 @@
             // else{
             //     echo "Error in executing the script" . $conn->error;
             // }
-            $sql = "ALTER TABLE students ADD city VARCHAR(30)";
+            // $sql = "ALTER TABLE students ADD city VARCHAR(30)";
             
-            if ($conn->query($sql)=== TRUE) {
-              echo "Table Altered successfully";
-            } else {
-              echo "Error: " . $sql . "<br>" . $conn->error;
-            }
+            // if ($conn->query($sql)=== TRUE) {
+            //   echo "Table Altered successfully";
+            // } else {
+            //   echo "Error: " . $sql . "<br>" . $conn->error;
+            // }
             
             ?>
             

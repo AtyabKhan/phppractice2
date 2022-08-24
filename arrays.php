@@ -42,11 +42,30 @@
             // $a1[3]=$a1[3-1];
             // $a1[2]=$temp;
             // print_r($a1);
-        $arrTest=[10,11,12];
-        for($x=0;$x<count($arrTest);$x++){
-            echo $arrTest[$x];
-        }
-
+        // $arrTest=[10,11,12];
+        // for($x=0;$x<count($arrTest);$x++){
+        //     echo $arrTest[$x];
+        // }
+        $pizzas = [
+            ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+            ['type' => 'volcano', 'base' => 'garlic crust'],
+            ['type' => 'veg supreme', 'base' => 'thin & crispy']
+          ];
+          $age=23;
+      $name='Atyab';
+      $assoc_arr = [
+        'pizzas' => $pizzas,
+        'name' => $name,
+        'age' => $age
+      ];
+    //   return ('pizzas', [
+    //     'pizzas' => $pizzas,
+    //     'name' => $name,
+    //     'age' => $age
+    //     ]);
+    echo "<pre>";
+    print_r($pizzas['hawaiian']);
+    echo "</pre>";
         ?>
     </body>
 </html>

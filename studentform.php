@@ -15,6 +15,12 @@
     if(isset($_POST["class"])){
         $class=$_POST["class"];
     }
+    if(isset($_POST["submit"])){
+        $class=$_POST["class"];
+        $st_age=$_POST["student_age"];
+        $st_name=$_POST["student_name"];
+
+    }
     print_r($class);
     $sql="INSERT INTO students(student_name,classroom_fk,student_age)
     VALUES ('$st_name','$class','$st_age')";
